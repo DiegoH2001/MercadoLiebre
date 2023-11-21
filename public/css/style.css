@@ -4,206 +4,471 @@ Celeste: #1259c3;
 Gris oscuro: #666;
 Gris claro: #ebebeb;
 Verde: #39b54a; */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto";
-    
-}
-a{
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    outline: none;
+    border:none;
     text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
+
+body{
+    font-family: 'Roboto','sans-serif';
+    font-size:12px;
+    background-color: #ebebeb;
+}
+
+
 /*  Header  */
+
+
 header{
-    background-color:#EAC926 ;
-    padding: 20px;
+    background-color:#EAC926;
+    padding:20px;
 }
-#logomeli{
-    width: 50%;
-    padding: 10px;
-    
+
+.header-form-logo{
+    display: inline-flex;
 }
-/* BODY */
-body {
-    font-family: "Roboto";
-    font-size: 12px;
-    
-    
+
+.logoMeLi{
+    width:50%;
+    margin-right:5px;
 }
-main{
-    width: 100%;
-    background-color:#ebebeb;
-}
-.main__section  {
+
+.header-form-logo form{
+    display: flex;
     align-items: center;
+    width:50%;
+    margin-left:5px;
+    color:#ff0000;
 }
-.header__input{
-    height: 25px;
-    width: 180px;
-    padding: 5px;
-    
+
+.header-input{
+    border-radius: 5px 0 0 5px;
+    height: 38px;
+    width: 90%;
+    padding:5px;
 }
-.header__section{
-    display: none;
+
+.header-button{
+    height: 38px;
+    border-radius: 0 5px 5px 0;
 }
-.header__div__h4{
+
+.header-p{
     text-align: center;
-    margin: 15px;
-}
-.body__titulares{
-    font-size: 24px;
-    padding-left: 15px;
-}
-.section__article{
-    margin: 10px 0px;
-    border-right: solid 15px #ebebeb;
-    border-left: solid 15px #ebebeb;
-    background-color: #fff;
-    
-}
-.section__article div{
-    border-top: solid 1px #ebebeb;
-    padding: 15px;
-    background-color: white;
-    width: 100%;
-    
-    
-}
-.section__article div i{
-    display: inline-block;
-    font-size: 16px;
-    color: #39b54a;
-    border: solid 1px #39b54a;
-    padding: 5px;
-    border-radius: 50%;
-    margin: 10px 0px;
+    margin:15px;
 }
 
-.article_precios{
-font-size: 18px;
-font-weight: 900;
-}
-.article__descuentos{
-    font-size: 16px;
-    color: #39b54a;
-    margin-bottom: 17px;
-    
-}
-.article__descripciones{
-    font-size: 16px;
-    color: #666;
+a{
+    margin:10px;
+    color:#000000;
 }
 
-.burger__menu {
+nav{
+    display:none;
+}
+
+.burger-menu{
     background-color: #1259c3;
-    width: 40px;
-    height:42px;
+    width:40px;
+    height:40px;
     margin:20px 0 0 45%;
-    padding:9px;
+    padding:11px;
     border-radius: 5px;
-    font-size: 2em;
-    color: white;
-    
-}
-
-.section__ul__1{
-    font-weight: bold;
-    margin: -15px;
-    padding-top: 10px;
-}
-.section__ul__2{
-    font-weight: bold;
-    margin: -15px;
-    padding-top: 30px;
 }
 
 
-.body__div__banner{
-    width: 100vw;
+/*  Home  */
+
+
+section img{
+    width:100%;
+}
+
+main{
+    width:90%;
+    margin: 0 auto;
+}
+
+.main-article{
+    margin:10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.articulo-producto{
+    border-top:1px solid #ebebeb;
+    padding:15px;
+    position: relative;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    color:#39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.fa-bars{
+    color:#fff;
+    font-size:20px;
+}
+
+.titulares{
+    font-size:24px;
+    width: 100%;
+}
+
+.precios{
+    display: inline-block;
+    font-size:18px;
+    margin-right: 5px;
+}
+
+.descuentos{
+    display: inline-block;
+    color:#39b54a;
+    font-size:12px;
+}
+
+.descripciones{
+    font-size:16px;
+    font-weight: normal;
+    color:#666;
+    display:none;
+    margin-top: 16px;
 }
 
 
-/* FOOTER */
+/*  Footer  */
+
+
 footer{
-    
+    background-color: #fff;
     text-align: center;
     padding:50px;
     width:100%;
     margin:auto;
 }
+
+.footer-article{
+    margin:20px 0 50px 0;
+    position:relative;
+}
+
 .footer-icon{
-    font-size: 2em;
+    font-size:30px;
     color:#1259c3;
-    margin-top:50px;
-    margin-bottom: 10px;
+    margin-bottom:10px;
 }
-.footer__article p{
-    color: #666 ;
-    font-weight: 500;
+
+.footer-article > *:not(i){
+    color:#666;
 }
-.footer__article h3{
-    font-weight: bolder;
-    font-size: 17px;
+
+.footer-article h3{
+    font-size:16px;
 }
-.footer__article h5{
-    padding-top: 50px;
-    font-size: 11px;
+
+.footer-article h5{
+    position:absolute;
+    font-size:12px;
+    left:-30px;
+}       
+
+
+/*  Registro  */
+
+
+.form-container-register{
+    width: 80%;
+    margin:20px auto;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #666;
+}
+
+.form-register{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.form-register label{
+    width: 100%;
+    font-weight: bold;
+    color:#666;
+}
+
+.form-register input{
+    margin: 5px 0;
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    border-radius: 2.5px;
+    border: 1px solid #666;
+}
+
+.file input{
+    border:none;
+}
+
+.form-register-selectors{
+    padding:10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-register-selectors h4{
+    width: 100%;
+    font-weight: bold;
+    color:#666;
+    margin:5px 0;
+}
+
+.form-register-selectors *:not(h4){
+    margin:0 5px 0 0;
+}
+
+.form-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-button{
+    margin: 16px 0;
+    font-size: 20px;
+    color: #ebebeb;
+    width: 40%;
+    height: 40px;
+    cursor: pointer;
+    background-color: #1259c3;
+    border-radius:5px;
+}
+
+.form-button:hover{
+    box-shadow: 0 0 5px #1259c3;
+}
+
+.persona::after{
+    content: "Su nombre y apellido solamente puede contener letras.";
+    color:red;
+}
+
+.usuario::after{
+    content: "Su nombre de usuario solamente puede contener caracteres alfanuméricos.";
+    color:red;
+}
+
+.email::after{
+    content: "Su email solamente puede contener caracteres alfanuméricos, guiones medios, guiones bajos y el arroba como intermediario.";
+    color:red;
+}
+
+.localidad::after{
+    content: "La localidad solamente puede contener letras.";
+    color:red;
+}
+
+.calle::after{
+    content: "La calle solamente puede contener letras.";
+    color:red;
+}
+
+.altura::after{
+    content: "La altura solamente puede contener números.";
+    color:red;
+}
+
+.contrasenia::after{
+    content: "Su contraseña debe contener caracteres alfanuméricos, al menos un guión bajo o guión medio y una extensión mínima de 6 caracteres.";
+    color:red;
+}
+
+.contraseniaconfirmar::after{
+    content: "Por favor, verifique que su contraseña coincida en la confirmación.";
+    color:red;
 }
 
 
-/* tablet */
-@media (min-width:361px){
-    
-    #logomeli{
-        width: 35%;
+/*  Ingreso  */
+
+
+.form-container-login{
+    width: 80%;
+    margin:20px auto;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #666;
+}
+
+.form-login{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.form-login label{
+    width: 100%;
+    font-weight: bold;
+    color:#666;
+}
+
+.form-login input{
+    margin: 5px 0;
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    border-radius: 2.5px;
+    border: 1px solid #666;
+}
+
+.form-button-login{
+    margin: 16px 0;
+    font-size: 16px;
+    color: #ebebeb;
+    width: 40%;
+    height: 40px;
+    cursor: pointer;
+    background-color: #1259c3;
+    border-radius:5px;
+}
+
+.form-button-login:hover{
+    box-shadow: 0 0 5px #1259c3;
+}
+
+.login::after{
+    content: "El nombre de usuario ingresado, no es correcto.";
+    color:red;
+}
+
+.login-contrasenia::after{
+    content: "La contraseña ingresada, no es correcta.";
+    color:red;
+}
+
+
+@media (min-width:361px) {
+    .main-section{
+        display:flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
-    .section__article{
-        box-shadow: 0px 0px 10px rgb(100,100,100) ;
-        width: 45vw;
-        border: none;
+    .main-article{
+        width:42%;
     }
-    .article__descripciones{
-        display: block;
+    .descripciones{
+        display:block;
     }
-    .header__section{
-        display: block;
+}
+
+@media screen and (min-width:761px){
+    .header-container-fl{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 25px;
     }
-    .burger__menu{
+    .header-form-logo{
+        width:70%;
+    }
+    .header-form-logo form{
+        justify-content: space-between;
+    }
+    .header-input{
+        height: 20px;
+        border-radius: 5px;
+    }
+    .header-button{
+        height: 18px;
+        width: 18px;
+        background-color: #ebebeb;
+        border-radius: 0;
+    }
+    .header-p{
+        display:flex;
+        align-items: center;
+        width:30%;
+        height: 10vh;
+    }
+    nav, .nav-ul{
+        display:flex;
+        justify-content: space-between;
+    }
+    .nav-ul li{
+        margin:0 10px;
+    }
+    .burger-menu{
+        display:none;
+    }
+    .main-article{
+        width:22%;
+        height: 100%
+    }
+    .form-container-register{
+        width: 50%;
+    }
+    .form-container-login{
+        width: 50%;
+    }
+    .form-button-login{
+        font-size: 20px;
+    }
+    .descripciones {
         display: none;
-    }
-    
-}
-
-/*Desktop*/
-@media (min-width:769px){
-    
-    .header__div__h4{
-        font-size: 30px;
-    }
-    .header__input{
-        height: 50px;
-        width: 600px;
-        padding: 5px;
-        font-size: 30px;
-    }
-    .header__button{
-        font-size: 36px;
-    }
-    .header__section{
-        font-size: 25px;
+        height: 0%;
+    }.articulo-producto:hover .descripciones{
         display: block;
+        height: 100%;
+        transition: height 5ms;
     }
-    .burger__menu{
-        display: none;
+    .articulo-producto:hover i{
+        transform: rotate(-90deg);
+        transition: transform 1s;
     }
-    .footer__article{
-        font-size: 18px;
+    .main-article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        transition: box-shadow 1s;
     }
-    .footer__article h3{
-        font-size: 25px;
+    footer{
+        padding:0px;
     }
-
+    footer i:hover{
+        color: #39b54a;
+        transition: color 2s;
+    }
+    footer{
+        padding:0px;
+    }
+    .footer-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer-article{
+        width: 30%;
+    }
+    .footer-article h5{
+        position:relative;
+        left:0;
+        width: 100%;
+    }  
 }
 
 
